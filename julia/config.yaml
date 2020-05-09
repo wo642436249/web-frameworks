@@ -7,6 +7,7 @@ provider:
 files:
   - "**/*.jl"
   - Project.toml
+  - Manifest.toml
 
 docker_pause: 20
 
@@ -18,7 +19,7 @@ cloud:
     runcmd:
       - systemctl disable cloud-init
       - systemctl enable web
-      - "cd /opt/web && julia deps.jl"
+      - cd /opt/web && julia deps.jl
 
 command: /usr/bin/julia /opt/web/server.jl
 
