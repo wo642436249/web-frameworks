@@ -16,3 +16,5 @@ bootstrap:
   - julia deps.jl
 
 command: /usr/bin/julia /opt/web/server.jl
+
+docker_pause: 20
