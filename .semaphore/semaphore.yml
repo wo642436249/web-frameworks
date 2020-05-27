@@ -681,6 +681,11 @@ blocks:
       - mkdir -p .neph/php/siler
       - retry bin/neph php/siler --mode=CI
       - FRAMEWORK=php/siler bundle exec rspec .spec
+    - name: fastsitephp
+      commands:
+      - mkdir -p .neph/php/fastsitephp
+      - retry bin/neph php/fastsitephp --mode=CI
+      - FRAMEWORK=php/fastsitephp bundle exec rspec .spec
     - name: one-fpm
       commands:
       - mkdir -p .neph/php/one-fpm
